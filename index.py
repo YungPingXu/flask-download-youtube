@@ -104,7 +104,7 @@ def mp3cut():
 	return ''
 
 def mp4cut_thread(title, start, end):
-	process = Popen('ffmpeg -y -i \"static/' + title + '.mp4\" -ss ' + start + ' -to ' + end + ' -acodec copy \"static/"' + title + '_mp4cut_' + start + '_' + end + '.mp4\"', stdout=PIPE, stderr=STDOUT, shell=True, universal_newlines=True, encoding="utf-8")
+	process = Popen('ffmpeg -y -i \"static/' + title + '.mp4\" -ss ' + start + ' -to ' + end + ' -acodec copy \"static/' + title + '_mp4cut_' + start + '_' + end + '.mp4\"', stdout=PIPE, stderr=STDOUT, shell=True, universal_newlines=True, encoding="utf-8")
 	output = ''
 	while True:
 		line = process.stdout.readline()
