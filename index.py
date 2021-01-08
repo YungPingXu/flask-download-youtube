@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
-from subprocess import Popen, PIPE, STDOUT, call
+from subprocess import Popen, PIPE, STDOUT
 from threading import Thread
-import mimetypes
 import re
 import os
 from moviepy.editor import VideoFileClip
